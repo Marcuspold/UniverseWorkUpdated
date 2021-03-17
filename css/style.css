@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+    --dark-color: rgba(105, 9, 230, 0.527);
+    --medium-color: #333;
+    --light-color: rgba(231, 172, 9, 0.26);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    color: var(--light-color);
+    padding: 1rem;
+}
+
+.header {
+   height: 95vh;
+   background-image: linear-gradient(to right bottom, var(--light-color),var(--dark-color)), url("../img/Kosmos.jpg");
+   clip-path: polygon(24% 40%, 75% 0%, 68% 59%, 100% 92%, 27% 90%, 0% 50%);
+}
+.header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    text-transform: uppercase;
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    animation: moveInFromLeft 3s ease-out;
+}
+
+@keyframes moveInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.heading-primary--sub {
+    display: black;
+    font-size: 2rem;
+    letter-spacing: 1.32rem;
+    animation: moveInFromRight 3s ease-out
+}
+
+.heading-primary--sub {
+    display: black;
+    font-size: 2rem;
+    letter-spacing: 1.32rem;
+    animation: moveInFromRight 3s ease-out
+}
+
+@keyframes moveInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+
+.btn--head {
+    display: block;
+    text-decoration: none;
+    border: 3px solid var(--light-color);
+    color: var(--light-color);
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 2rem;
+    margin: 2rem auto -15rem auto;
+    animation: fadeIn 3s;
+    transition: transform 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.section-about {
+    background-color: var(--light-color);
+    padding: 20rem;
+    margin-top: -20rem;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    height: 300px;
+    padding: 2rem;
+}
+
+.row:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.u-center-text {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--light-color), var(--dark-color));
+    -webkit-background-clip: text;
+    transition: all 2s;
+}
+
+.heading-secondary:hover {
+    transform: skewY(2deg) skewY(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.8);
+}
+
+.heading-tertitary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.section-about p {
+    font-size: 1.6rem;
+    padding-bottom: 3rem;
+
+}
+
+.btn-text:link, .btn--head:link {
+    font-size: 1.6rem;
+    color: var(--medium-color);
+    text-decoration: none;
+    border: 0.2rem solid var(--dark-color);
+    display: inline-block;
+    padding: 0.5rem;
+    transition: all 0.2s;
+}
+
+.btn-text:hover {
+    background-color: var(--dark-color);
+    color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0,0.2);
+
+}
+
+.btn-text:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0,0.2);
+    transform: translateY(5px);
+}
+
+.composition {
+    position: relative;
+}
+
+.composition_photo {
+    width: 55%;
+    border-radius: 5px;
+    box-shadow: 0 1.5 4rem rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 10;
+    outline-offset: 2rem;
+    transition: all 0.3s;
+}
+
+.composition_photo:hover {
+    outline: 1rem solid var(--medium-color);
+    transform: scale(1.05) translate(-0.5rem);
+    box-shadow: 0.2rem 4rem rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
+
+.composition__photo--p1 {
+    left: 0;
+    top: -2rem;
+}
+
+.composition__photo--p2 {
+    right: 0;
+    top: 2rem;
+}
+
+.composition__photo--p3 {
+    left: 10rem;
+    top: 10rem;
+}
